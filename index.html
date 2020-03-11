@@ -15,24 +15,64 @@
       <nav>
       <h1>Tic-Tac-Toe</h1>
       </nav>
+      <!-- Sign Up form -->
+      <form id="sign-up" class="border container">
+      <fieldset>
+        <legend>Sign Up</legend>
+      <input type="email" name="credentials[email]" placeholder="user@email.com" >
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="password" name="credentials[password_confirmation]" placeholder="Password confirmation ">
+      <input type="submit" value="Sign Up">
+      </fieldset>
+    </form>
+    <!-- Sign In form -->
+    <form id="sign-in" class="border container">
+      <fieldset>
+        <legend>Sign In</legend>
+      <input type="email" name="credentials[email]" placeholder="user@email.com" >
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="submit" value="Sign In">
+      </fieldset>
+    </form>
+    <!-- Change Password -->
+    <form id="change-Pw" class="border container">
+      <fieldset>
+        <legend>Change Password</legend>
+      <input type="password" name="passwords[old]" placeholder="Actual Password">
+      <input type="password" name="passwords[new]" placeholder="New Password">
+      <input type="submit" value="Change">
+      </fieldset>
+    </form>
+    <!-- Sign Out button -->
+    <form id="sign-out" class="border container">
+      <fieldset>
+      <input type="submit" value="Sign Out">
+      </fieldset>
+    </form>
 
 
+
+      <!-- New game Button -->
+      <form id="new-Game" class="container">
+      <fieldset>
+      <input type="submit" value="New Game">
+      </fieldset>
+    </form>
       <!-- Game Board-->
       <div class='container'>
           <div id="buttons" class="row">
-            <button id="1" type="button" class="col-4 box alt-color"></button>
-            <button id="2" type="button" class="col-4 box alt-color"></button>
-            <button id="3" type="button" class="col-4 box alt-color"></button>
-            <button id="4" type="button" class="col-4 box alt-color"></button>
-            <button id="5" type="button" class="col-4 box alt-color"></button>
-            <button id="6" type="button" class="col-4 box alt-color"></button>
-            <button id="7" type="button" class="col-4 box alt-color"></button>
-            <button id="8" type="button" class="col-4 box alt-color"></button>
-            <button id="9" type="button" class="col-4 box alt-color"></button>
+            <button id=0 type="button" class="col-4 box alt-color"></button>
+            <button id=1 type="button" class="col-4 box alt-color"></button>
+            <button id=2 type="button" class="col-4 box alt-color"></button>
+            <button id=3 type="button" class="col-4 box alt-color"></button>
+            <button id=4 type="button" class="col-4 box alt-color"></button>
+            <button id=5 type="button" class="col-4 box alt-color"></button>
+            <button id=6 type="button" class="col-4 box alt-color"></button>
+            <button id=7 type="button" class="col-4 box alt-color"></button>
+            <button id=8 type="button" class="col-4 box alt-color"></button>
           </div>
       </div>
-
-
+      <p class='message container'></p>
 
       <footer>
 
