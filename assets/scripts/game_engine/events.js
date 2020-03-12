@@ -5,10 +5,11 @@ const ui = require('./ui')
 
 // function tha compare values of the play vs the winning combination
 const checkWinner = function (letter) {
-  for (let i = 0; i < 8; i++) {
-    if (store.combinations[i].every(v => store.p[v] === 'X') || store.combinations[i].every(v => store.p[v] === 'O')) {
-      ui.gameFinished(letter)
-    }
+  // will return true or false if any of the combos meet the winnig criteria or it's a tie
+  if (store.combinations.some(combo => combo.every(v => store.p[v] === 'X') || combo.every(v => store.p[v] === 'O'))) {
+    ui.gameFinished(letter)
+  } else if (store.count === 9) {
+    ui.gameFinished('Nodoby')
   }
 }
 
@@ -16,30 +17,25 @@ const checkWinner = function (letter) {
 const onPlay = function (event) {
   // to prevent the page from reloading when pressing the button i use preventDefault()
   event.preventDefault()
-
   // to get the id of the button clicked we use event.target.id and assign it to buttonId
   const buttonId = event.target.id
+
   // condition to check if button has ben press
   if ($('#' + buttonId).html() === '') {
     // counter to keep track of plays
     store.count += 1
     // condition to check if we still have space in the board
-    if (store.count <= 9) {
-      // if we have space then check turn
-      if (store.count % 2 === 0) {
-      // now we send that id to ui.changeValue to change the value of that particular button
-        ui.changeValueX(buttonId)
-        store.p[buttonId] = 'X'
-        checkWinner('X')
-      } else {
-        ui.changeValueO(buttonId)
-        store.p[buttonId] = 'O'
-        checkWinner('O')
-      }
-      // if no space and no winner then is a Tie
+    // if we have space then check turn
+    // change between players
+    if (store.count % 2 === 0) {
+      store.currentLetter = 'O'
     } else {
-      ui.gameFinished('Tie')
+      store.currentLetter = 'X'
     }
+    // now we send that id to ui.changeValue to change the value of that particular button
+    ui.changeValue(buttonId, store.currentLetter)
+    store.p[buttonId] = store.currentLetter
+    checkWinner(store.currentLetter)
   }
 }
 

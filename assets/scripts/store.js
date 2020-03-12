@@ -2,8 +2,13 @@
 
 const store = {
 }
-let count = 1
+// Current play
+let currentLetter = ''
+// player counter
+let count = 0
+// board representation
 let p = ['', '', '', '', '', '', '', '', '']
+// wining combinations
 const combinations = [
   [0, 1, 2],
   [3, 4, 5],
@@ -19,5 +24,6 @@ module.exports = {
   store,
   count,
   p,
-  combinations
+  combinations,
+  currentLetter
 }
