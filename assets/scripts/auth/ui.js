@@ -23,7 +23,6 @@ const signInSuccess = function (data) {
   $('#sign-in').addClass('hide')
   $('#sign-up').addClass('hide')
   $('#sign-out').removeClass('hide')
-
   store.user = data.user
 }
 const signInFailure = function (data) {
