@@ -35,17 +35,35 @@ const gameFinished = function (y) {
   }
 }
 
+// if a move is succesfull update the message
 const newMovesuccesfull = function (data) {
-  console.log(data)
-}
-const newMovefailure = function (data) {
+  if (store.currentLetter === 'X') {
+    $('.message1').text('next move: O')
+  } else {
+    $('.message1').text('next move: X')
+  }
   // console.log(data)
 }
+const newMovefailure = function (data) {
+  $('.message').text('error')
+  // console.log(data)
+}
+
+// show stats of user
+const gameStatssuccesfull = function (data) {
+  $('.message2').text('Total Games: ' + data.games.length)
+}
+const gameStatsfailure = function (data) {
+  $('.message2').text('failure getting stats')
+}
+
 module.exports = {
   changeValue,
   newGamesuccesfull,
   gameFinished,
   newGamefailure,
   newMovesuccesfull,
-  newMovefailure
+  newMovefailure,
+  gameStatsfailure,
+  gameStatssuccesfull
 }

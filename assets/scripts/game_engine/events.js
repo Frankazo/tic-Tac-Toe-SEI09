@@ -44,6 +44,8 @@ const onPlay = function (event) {
     ui.changeValue(buttonId, store.currentLetter)
     store.p[buttonId] = store.currentLetter
     checkWinner(buttonId, store.currentLetter)
+  } else {
+    $('.message1').text('invalid movement')
   }
 }
 
@@ -55,7 +57,16 @@ const onNewGame = function (event) {
     .catch(ui.newGamefailure)
 }
 
+// check player Stats
+const onStats = function (event) {
+  event.preventDefault()
+  api.gameStats()
+    .then(ui.gameStatssuccesfull)
+    .catch(ui.gameStatsfailure)
+}
+
 module.exports = {
   onPlay,
-  onNewGame
+  onNewGame,
+  onStats
 }
