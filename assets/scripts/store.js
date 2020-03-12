@@ -2,6 +2,8 @@
 
 const user = {
 }
+// game is over
+let bool = false
 // Current play
 let currentLetter = ''
 // player counter

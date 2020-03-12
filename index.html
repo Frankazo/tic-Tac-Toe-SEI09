@@ -15,6 +15,7 @@
       <nav>
       <h1>Tic-Tac-Toe</h1>
       </nav>
+      <h2 id='sMessage' class='container'></h2>
       <!-- Sign Up form -->
       <form id="sign-up" class="border container">
       <fieldset>
@@ -35,7 +36,7 @@
       </fieldset>
     </form>
     <!-- Change Password -->
-    <form id="change-Pw" class="border container">
+    <form id="change-Pw" class="border container hide">
       <fieldset>
         <legend>Change Password</legend>
       <input type="password" name="passwords[old]" placeholder="Actual Password">
@@ -44,20 +45,20 @@
       </fieldset>
     </form>
     <!-- Sign Out button -->
-    <form id="sign-out" class="border container">
+    <form id="sign-out" class="border container hide">
       <fieldset>
       <input type="submit" value="Sign Out">
       </fieldset>
     </form>
 
       <!-- New game Button -->
-      <form id="new-Game" class="container">
+      <form id="new-Game" class="container hide">
       <fieldset>
       <input type="submit" value="New Game">
       </fieldset>
       </form>
       <!-- Stats Button -->
-      <form id="stats" class="container">
+      <form id="stats" class="container hide">
       <fieldset>
       <input type="submit" value="Stats">
       </fieldset>
@@ -65,7 +66,7 @@
 
       <!-- Game Board-->
       <div class='container'>
-          <div id="buttons" class="row">
+          <div id="buttons" class="row hide">
             <button id=0 type="button" class="col-4 box alt-color"></button>
             <button id=1 type="button" class="col-4 box alt-color"></button>
             <button id=2 type="button" class="col-4 box alt-color"></button>
@@ -80,7 +81,7 @@
 
       <!-- Messages -->
       <p class='message container'></p>
-      <p class='message1 container'></p>
+      <p class='message1 container hide'>Player X first</p>
       <p class='message2 container'></p>
       <footer>
 

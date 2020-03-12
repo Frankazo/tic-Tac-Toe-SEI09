@@ -1,52 +1,79 @@
 'use strict'
 const store = require('../store')
 const signUpSuccess = function (data) {
-  $('#message').text('Signed up Succesfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#sMessage').text('Signed up Succesfully')
+  $('#sMessage').removeClass('failure')
+  $('#sMessage').addClass('success')
+  $('#sign-up').addClass('hide')
 }
 const signUpFailure = function () {
-  $('#message').text('Error Signing up')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#sMessage').text('Error Signing up')
+  $('#sMessage').removeClass('success')
+  $('#sMessage').addClass('failure')
 }
 
 const signInSuccess = function (data) {
-  $('#message').text('Signed in Succesfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  // console.log(data)
+  $('#sMessage').text('Signed in Succesfully')
+  $('#sMessage').removeClass('failure')
+  $('#sMessage').addClass('success')
+
+  $('#change-Pw').removeClass('hide')
+  $('#new-Game').removeClass('hide')
+  $('#stats').removeClass('hide')
+  $('#sign-in').addClass('hide')
+  $('#sign-up').addClass('hide')
+  $('#sign-out').removeClass('hide')
+
   store.user = data.user
 }
 const signInFailure = function (data) {
-  $('#message').text('Error Signing in')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#sMessage').text('Error Signing in')
+  $('#sMessage').removeClass('success')
+  $('#sMessage').addClass('failure')
   // console.log(error)
 }
 
 const changePWSuccess = function (data) {
-  $('#message').text('Changed Password Succesfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#sMessage').text('Changed Password Succesfully')
+  $('#sMessage').removeClass('failure')
+  $('#sMessage').addClass('success')
   // console.log(data)
 }
 const changePWFailure = function (data) {
-  $('#message').text('Error changing Password')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#sMessage').text('Error changing Password')
+  $('#sMessage').removeClass('success')
+  $('#sMessage').addClass('failure')
   // console.log(error)
 }
 
 const signOutSuccess = function () {
-  $('#message').text('Signed out Succesfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#sMessage').text('Signed out Succesfully')
+  $('#sMessage').removeClass('failure')
+  $('#sMessage').addClass('success')
+  $('#buttons').addClass('hide')
+  $('#change-Pw').addClass('hide')
+  $('#new-Game').addClass('hide')
+  $('#stats').addClass('hide')
+  $('#sign-in').removeClass('hide')
+  $('#sign-up').removeClass('hide')
+  $('#message1').addClass('hide')
+  $('#sign-out').addClass('hide')
+  $('.message1').addClass('hide')
+  for (let i = 0; i < 9; i++) {
+    $('#' + i).html('')
+    document.getElementById(i).disabled = false
+  }
+  $('.message').text('')
+  $('.message2').text('')
+  store.p = ['', '', '', '', '', '', '', '', '']
+  store.count = 0
+  store.currentLetter = ''
+  store.bool = false
 }
 const signOutFailure = function () {
-  $('#message').text('Error Signing out')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#sMessage').text('Error Signing out')
+  $('#sMessage').removeClass('success')
+  $('#sMessage').addClass('failure')
 }
 
 module.exports = {

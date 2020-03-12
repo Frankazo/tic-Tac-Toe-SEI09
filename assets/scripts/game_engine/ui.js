@@ -20,6 +20,10 @@ const newGamesuccesfull = function (data) {
   store.count = 0
   store.currentLetter = ''
   store.game = data.game
+  store.bool = false
+  $('#buttons').removeClass('hide')
+  $('.message1').removeClass('hide')
+  $('.message1').text('Player X first')
   // console.log(data.game)
 }
 const newGamefailure = function (data) {
@@ -38,9 +42,12 @@ const gameFinished = function (y) {
 // if a move is succesfull update the message
 const newMovesuccesfull = function (data) {
   if (store.currentLetter === 'X') {
-    $('.message1').text('next move: O')
+    $('.message1').text('next move: Player O')
   } else {
-    $('.message1').text('next move: X')
+    $('.message1').text('next move: Player X')
+  }
+  if (store.bool === true) {
+    $('.message1').addClass('hide')
   }
   // console.log(data)
 }
