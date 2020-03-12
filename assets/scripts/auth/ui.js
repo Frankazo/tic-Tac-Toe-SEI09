@@ -15,27 +15,27 @@ const signInSuccess = function (data) {
   $('#message').text('Signed in Succesfully')
   $('#message').removeClass()
   $('#message').addClass('success')
-  console.log(data)
+  // console.log(data)
   store.user = data.user
 }
-const signInFailure = function (error) {
+const signInFailure = function (data) {
   $('#message').text('Error Signing in')
   $('#message').removeClass()
   $('#message').addClass('failure')
-  console.log(error)
+  // console.log(error)
 }
 
 const changePWSuccess = function (data) {
   $('#message').text('Changed Password Succesfully')
   $('#message').removeClass()
   $('#message').addClass('success')
-  console.log(data)
+  // console.log(data)
 }
-const changePWFailure = function (error) {
+const changePWFailure = function (data) {
   $('#message').text('Error changing Password')
   $('#message').removeClass()
   $('#message').addClass('failure')
-  console.log(error)
+  // console.log(error)
 }
 
 const signOutSuccess = function () {

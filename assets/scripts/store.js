@@ -1,6 +1,6 @@
 'use strict'
 
-const store = {
+const user = {
 }
 // Current play
 let currentLetter = ''
@@ -21,7 +21,7 @@ const combinations = [
 ]
 
 module.exports = {
-  store,
+  user,
   count,
   p,
   combinations,

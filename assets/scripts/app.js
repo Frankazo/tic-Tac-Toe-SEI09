@@ -11,6 +11,7 @@ $(() => {
   // click event that will change the empty space to an X or O
   $('#buttons').on('click', events.onPlay)
   $('#new-Game').on('submit', events.onNewGame)
+  $('#stats').on('submit', events.onStats)
 
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
