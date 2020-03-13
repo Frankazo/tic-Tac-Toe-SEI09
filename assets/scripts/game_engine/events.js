@@ -27,7 +27,7 @@ const onPlay = function (event) {
   event.preventDefault()
   // to get the id of the button clicked we use event.target.id and assign it to buttonId
   const buttonId = event.target.id
-
+  $('.message2').text('')
   // condition to check if and empty button has been press
   if ($('#' + buttonId).html() === '') {
     // counter to keep track of plays
@@ -45,7 +45,7 @@ const onPlay = function (event) {
     store.p[buttonId] = store.currentLetter
     checkWinner(buttonId, store.currentLetter)
   } else {
-    $('.message1').text('invalid movement next turn: ' + store.currentLetter)
+    $('.message2').text('invalid movement')
   }
 }
 

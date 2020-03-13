@@ -1,7 +1,7 @@
 'use strict'
 const store = require('../store')
 const signUpSuccess = function (data) {
-  $('#sMessage').text('Signed up Succesfully')
+  $('#sMessage').text('Signed up Succesfully, you have to Log in')
   $('#sMessage').removeClass('failure')
   $('#sMessage').addClass('success')
   $('#sign-up').addClass('hide')
@@ -32,7 +32,6 @@ const signInFailure = function (data) {
   $('#sMessage').text('Error Signing in')
   $('#sMessage').removeClass('success')
   $('#sMessage').addClass('failure')
-  // console.log(error)
 }
 
 const changePWSuccess = function (data) {
@@ -40,13 +39,11 @@ const changePWSuccess = function (data) {
   $('#sMessage').removeClass('failure')
   $('#sMessage').addClass('success')
   document.getElementById('change-Pw').reset()
-  // console.log(data)
 }
 const changePWFailure = function (data) {
   $('#sMessage').text('Error changing Password')
   $('#sMessage').removeClass('success')
   $('#sMessage').addClass('failure')
-  // console.log(error)
 }
 
 const signOutSuccess = function () {
@@ -54,6 +51,7 @@ const signOutSuccess = function () {
   $('#sMessage').removeClass('failure')
   $('#sMessage').addClass('success')
   $('#buttons').addClass('hide')
+  $('#sign').addClass('hide')
   $('#change-Pw').addClass('hide')
   $('#new-Game').addClass('hide')
   $('#stats').addClass('hide')

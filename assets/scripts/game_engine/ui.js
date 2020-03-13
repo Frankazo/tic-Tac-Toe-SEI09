@@ -1,7 +1,6 @@
 'use strict'
 const store = require('../store')
 const changeValue = function (id, letter) {
-  // console.log('working in ui')
   // logic of what player is playing
   // condition that avoids the player from playing in the same spot
   if ($('#' + id).html() === '') {
@@ -22,9 +21,10 @@ const newGamesuccesfull = function (data) {
   store.game = data.game
   store.bool = false
   $('#buttons').removeClass('hide')
+  $('#sign').removeClass('hide')
+  $('.message2').text('')
   $('.message1').removeClass('hide')
   $('.message1').text('Player X first')
-  // console.log(data.game)
 }
 const newGamefailure = function (data) {
   $('.message').text('Unable to start a new game')
@@ -32,7 +32,6 @@ const newGamefailure = function (data) {
 
 // when game is finished stop user from keep playing and displays winner
 const gameFinished = function (y) {
-  // console.log(y + ' won')
   $('.message').text(y + ' won')
   for (let i = 0; i < 9; i++) {
     document.getElementById(i).disabled = true
@@ -49,11 +48,9 @@ const newMovesuccesfull = function (data) {
   if (store.bool === true) {
     $('.message1').addClass('hide')
   }
-  // console.log(data)
 }
 const newMovefailure = function (data) {
   $('.message').text('error')
-  // console.log(data)
 }
 
 // show stats of user

@@ -4,6 +4,7 @@
       <title>Tic-Tac-Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
@@ -13,13 +14,13 @@
     </head>
     <body>
       <!-- Navigation Bar -->
-       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Tic-Tac-Toe</a>
+       <nav class="navbar navbar-expand navbar-light bg-light">
+        <h2><a class="navbar-brand" href="#">Tic-Tac-Toe</a></h2>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="https://www.linkedin.com/in/franklr/">Contact Me<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="https://www.linkedin.com/in/franklr/" target="_blank">Frank Luis-Ravelo<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Never use Real Credentials</a>
@@ -91,7 +92,7 @@
             </li>
           </ul>
           <!-- Auth Messages -->
-        <h3 id='sMessage' class='container'></h3>
+        <h3 id='sMessage' class='messageBoard'></h3>
 
           <!-- Log out -->
           <form id="sign-out" class="border hide form-inline my-2 my-lg-0">
@@ -102,8 +103,10 @@
         </div>
       </nav>
 
+
       <!-- Tic-Tac-Toe Board -->
       <div class='container'>
+          <h1 id="sign" class="hide">Tic-Tac-Toe</h1>
           <div id="buttons" class="row hide">
             <button id=0 type="button" class="col-4 box alt-color"></button>
             <button id=1 type="button" class="col-4 box alt-color"></button>
@@ -118,9 +121,9 @@
       </div>
 
       <!-- Messages -->
-      <p class='message container'></p>
-      <p class='message1 container hide'>Player X first</p>
-      <p class='message2 container'></p>
+      <h2 class='message container'></h2>
+      <h2 class='message1 container hide'>Player X first</h2>
+      <h2 class='message2 container'></h2>
 
     </body>
 </html>

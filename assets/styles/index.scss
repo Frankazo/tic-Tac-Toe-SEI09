@@ -1,12 +1,26 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
 
-$alt-color: $cyan;
+$alt-color: #0F9D58;
 $body-bg-color: $gray-200;
 $font-color: $light;
 
 
 body {
   background-color: $body-bg-color;
+}
+
+h1 {
+  font-family: 'VT323', monospace;
+}
+
+h2 {
+  font-family: 'VT323', monospace;
+}
+
+h3 {
+  font-family: 'VT323', monospace;
+  padding: 0 20px;
 }
 
 
@@ -22,6 +36,11 @@ body {
 
 .container {
   max-width: 50%;
+  margin: 100px auto;
+}
+
+.messageBoard {
+  align-items: center;
 }
 
 .alt-color {
