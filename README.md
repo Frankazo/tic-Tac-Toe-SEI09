@@ -20,19 +20,19 @@ CONTENTS OF THIS FILE
   WIREFRAMES
   ----------
   Initial Stage
-  - ![alt text](https://imgur.com/mANv1yL "Initial Stage")
+  - ![alt text](https://github.com/Frankazo/tic-Tac-Toe-SEI09/blob/master/assets/images/Initial%20Stage.png?raw=true "Initial Stage")
 
   - Sign In or Sign Up Stage
-  - ![alt text](https://imgur.com/0qcwpL9)
+  - ![alt text](https://github.com/Frankazo/tic-Tac-Toe-SEI09/blob/master/assets/images/Sign%20In%20or%20Sign%20Up%20Stage.png?raw=true)
 
   - New Game Stage
-  - ![alt text](https://imgur.com/iXVZPvf)
+  - ![alt text](https://github.com/Frankazo/tic-Tac-Toe-SEI09/blob/master/assets/images/New%20Game%20Stage.png?raw=true)
 
   - Finished Game Stage
-  - ![alt text](https://imgur.com/jjZ6yVa)
+  - ![alt text](https://github.com/Frankazo/tic-Tac-Toe-SEI09/blob/master/assets/images/Finished%20Game%20Stage.png?raw=true)
 
   - Glossary
-  - ![alt text](https://imgur.com/OQnCBl5)
+  - ![alt text](https://github.com/Frankazo/tic-Tac-Toe-SEI09/blob/master/assets/images/Glossary.png?raw=true)
 
   USER STORIES
   ------------
@@ -55,9 +55,9 @@ CONTENTS OF THIS FILE
   - Keep track of the current player
   - Current player rotates between X and O
   - Logic to check Board for Winner
-    - Create and Arrays with the 8 possible wining combinations
-    - After each play check Board representation vs wining combinations for 'X' or 'O'
-    - [ (store.combinations.some(combo => combo.every(v => store.p[v] === 'X') || combo.every(v => store.p[v] === 'O'))) ]
+  - Create and Arrays with the 8 possible wining combinations
+  - After each play check Board representation vs wining combinations for 'X' or 'O'
+          (store.combinations.some(combo => combo.every(v => store.board[v] === 'X') || combo.every(v => store.board[v] === 'O')))
     - If this is false in the last play then is a Draw
 
   ### Game UI
