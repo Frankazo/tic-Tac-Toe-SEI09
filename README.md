@@ -19,7 +19,7 @@ CONTENTS OF THIS FILE
 
   WIREFRAMES
   ----------
-    - Initial Stage https://imgur.com/mANv1yL
+    - ![Initial Stage](https://imgur.com/mANv1yL "Initial Stage") 
 
     - Sign In or Sign Up Stage https://imgur.com/0qcwpL9
 
@@ -92,4 +92,4 @@ CONTENTS OF THIS FILE
   CREATOR
   -------
 
-    - Frank Luis-Ravelo https://www.linkedin.com/in/franklr/
+    -  [Frank Luis-Ravelo](https://www.linkedin.com/in/franklr/)
