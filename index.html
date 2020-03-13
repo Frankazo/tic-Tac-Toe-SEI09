@@ -58,18 +58,16 @@
               </div>
             </li>
             <!-- Change Password -->
-            <li class="nav-item dropdown my-2 my-lg-0 hide">
-              <a class="nav-link btn btn-outline-success my-2 my-sm-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown my-2 my-lg-0">
+              <a class="nav-link btn btn-outline-success my-2 my-sm-0 hide" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Change Password
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <form id="change-Pw" class="border hide">
-                  <fieldset>
+                <form id="change-Pw">
                     <legend>Change Password</legend>
                   <input type="password" name="passwords[old]" placeholder="Actual Password">
                   <input type="password" name="passwords[new]" placeholder="New Password">
-                  <input type="submit" value="Change">
-                  </fieldset>
+                  <input type="submit" value="Change Password">
                 </form>
               </div>
             </li>
@@ -94,10 +92,8 @@
         <h3 id='sMessage' class='messageBoard'></h3>
 
           <!-- Log out -->
-          <form id="sign-out" class="border hide form-inline my-2 my-lg-0">
-              <fieldset>
+          <form id="sign-out" class="hide form-inline my-2 my-lg-0">
               <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Log Out">
-              </fieldset>
           </form>
         </div>
       </nav>

@@ -26,17 +26,18 @@ footer {
 }
 
 .dropdown-menu {
-  padding: 20px;
+  padding: 20px 15px;
+}
+
+.btn {
+  margin: 0 3px;
 }
 
 input {
   margin: 5px 0;
 }
 
-h1 {
-  font-family: 'VT323', monospace;
-}
-
+h1,
 h2 {
   font-family: 'VT323', monospace;
 }

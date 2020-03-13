@@ -18,10 +18,10 @@ const signInSuccess = function (data) {
   $('#sMessage').text('Signed in Succesfully')
   $('#sMessage').removeClass('failure')
   $('#sMessage').addClass('success')
-  $('#change-Pw').removeClass('hide')
   $('#new-Game').removeClass('hide')
   $('#stats').removeClass('hide')
   $('#navbarDropdown1').addClass('hide')
+  $('#navbarDropdown3').removeClass('hide')
   $('.dropdown-menu').removeClass('show')
   $('#navbarDropdown2').addClass('hide')
   $('#sign-out').removeClass('hide')
@@ -52,7 +52,6 @@ const signOutSuccess = function () {
   $('#sMessage').addClass('success')
   $('#buttons').addClass('hide')
   $('#sign').addClass('hide')
-  $('#change-Pw').addClass('hide')
   $('#new-Game').addClass('hide')
   $('#stats').addClass('hide')
   $('#message1').addClass('hide')
@@ -60,6 +59,7 @@ const signOutSuccess = function () {
   $('.message1').addClass('hide')
   $('#navbarDropdown1').removeClass('hide')
   $('#navbarDropdown2').removeClass('hide')
+  $('#navbarDropdown3').addClass('hide')
   for (let i = 0; i < 9; i++) {
     $('#' + i).html('')
     document.getElementById(i).disabled = false
