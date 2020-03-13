@@ -19,15 +19,20 @@ CONTENTS OF THIS FILE
 
   WIREFRAMES
   ----------
-    - ![alt text](https://imgur.com/mANv1yL "Initial Stage")
+  Initial Stage
+  - ![alt text](https://imgur.com/mANv1yL "Initial Stage")
 
-    - Sign In or Sign Up Stage https://imgur.com/0qcwpL9
+  - Sign In or Sign Up Stage
+  - ![alt text](https://imgur.com/0qcwpL9)
 
-    - New Game Stage https://imgur.com/iXVZPvf
+  - New Game Stage
+  - ![alt text](https://imgur.com/iXVZPvf)
 
-    - Finished Game Stage https://imgur.com/jjZ6yVa
+  - Finished Game Stage
+  - ![alt text](https://imgur.com/jjZ6yVa)
 
-    - Glossary https://imgur.com/OQnCBl5
+  - Glossary
+  - ![alt text](https://imgur.com/OQnCBl5)
 
   USER STORIES
   ------------
@@ -91,5 +96,4 @@ CONTENTS OF THIS FILE
 
   CREATOR
   -------
-
-    -  ['Frank Luis-Ravelo'](https://www.linkedin.com/in/franklr/)
+  - [Frank Luis-Ravelo](https://www.linkedin.com/in/franklr/)
