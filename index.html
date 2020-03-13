@@ -12,37 +12,37 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-
-       <nav class="navbar navbar-expand navbar-light bg-light">
+      <!-- Navigation Bar -->
+       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Tic-Tac-Toe</a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="https://www.linkedin.com/in/franklr/">Contact Me<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-              <!-- Sign In -->
-            </li>
-            <li class="nav-item dropdown my-2 my-lg-0">
-              <a class="nav-link btn btn-outline-success my-2 my-sm-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Never use Real Credentials</a>
+           </li>
+            <!-- Sign In -->
+            <li class="nav-item dropdown my-2 my-lg-0 collapse.show">
+              <a class="nav-link btn btn-outline-success my-2 my-sm-0" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sign in
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <form id="sign-in" class="border">
-                  <fieldset>
                     <legend>Sign In</legend>
                   <input type="email" name="credentials[email]" placeholder="user@email.com" >
                   <input type="password" name="credentials[password]" placeholder="Password">
                   <input type="submit" value="Sign In">
-                  </fieldset>
                 </form>
               </div>
             </li>
+
+
             <!-- Sign up -->
             <li class="nav-item dropdown my-2 my-lg-0">
-              <a class="nav-link btn btn-outline-success my-2 my-sm-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link btn btn-outline-success my-2 my-sm-0" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sign up
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -73,22 +73,25 @@
                 </form>
               </div>
             </li>
-            <li class="nav-item">
             <!-- New game Button -->
-            <form id="new-Game" class="hide">
-            <fieldset>
-            <input type="submit" value="New Game" class="btn btn-outline-success my-2 my-sm-0">
-            </fieldset>
-            </form>
+            <li class="nav-item">
+              <form id="new-Game" class="hide">
+                <fieldset>
+                  <input type="submit" value="New Game" class="btn btn-outline-success my-2 my-sm-0">
+                </fieldset>
+              </form>
             </li>
-            <li>
+            <!-- Stats Button -->
+            <li class="nav-item">
               <form id="stats" class="hide">
-              <fieldset>
-              <input type="submit" value="Stats" class="btn btn-outline-success my-2 my-sm-0">
-              </fieldset>
+                <fieldset>
+                  <input type="submit" value="Stats" class="btn btn-outline-success my-2 my-sm-0">
+                </fieldset>
               </form>
             </li>
           </ul>
+          <!-- Auth Messages -->
+        <h3 id='sMessage' class='container'></h3>
 
           <!-- Log out -->
           <form id="sign-out" class="border hide form-inline my-2 my-lg-0">
@@ -96,62 +99,10 @@
               <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Log Out">
               </fieldset>
           </form>
-
         </div>
       </nav>
 
-
-
-      <h2 id='sMessage' class='container'></h2>
-      <!-- Sign Up form
-      <form id="sign-up" class="border">
-      <fieldset>
-        <legend>Sign Up</legend>
-      <input type="email" name="credentials[email]" placeholder="user@email.com" >
-      <input type="password" name="credentials[password]" placeholder="Password">
-      <input type="password" name="credentials[password_confirmation]" placeholder="Password confirmation ">
-      <input type="submit" value="Sign Up">
-      </fieldset>
-    </form>
-     Sign In form
-    <form id="sign-in" class="border">
-      <fieldset>
-        <legend>Sign In</legend>
-      <input type="email" name="credentials[email]" placeholder="user@email.com" >
-      <input type="password" name="credentials[password]" placeholder="Password">
-      <input type="submit" value="Sign In">
-      </fieldset>
-    </form> -->
-    <!-- Change Password
-    <form id="change-Pw" class="border hide">
-      <fieldset>
-        <legend>Change Password</legend>
-      <input type="password" name="passwords[old]" placeholder="Actual Password">
-      <input type="password" name="passwords[new]" placeholder="New Password">
-      <input type="submit" value="Change">
-      </fieldset>
-    </form> -->
-    <!-- Sign Out button
-    <form id="sign-out" class="border hide">
-      <fieldset>
-      <input type="submit" value="Log Out">
-      </fieldset>
-    </form> -->
-
-      <!-- New game Button
-      <form id="new-Game" class="hide">
-      <fieldset>
-      <input type="submit" value="New Game">
-      </fieldset>
-      </form> -->
-      <!-- Stats Button
-      <form id="stats" class="hide">
-      <fieldset>
-      <input type="submit" value="Stats">
-      </fieldset>
-      </form>
-        -->
-      <!-- Game Board-->
+      <!-- Tic-Tac-Toe Board -->
       <div class='container'>
           <div id="buttons" class="row hide">
             <button id=0 type="button" class="col-4 box alt-color"></button>
@@ -170,9 +121,6 @@
       <p class='message container'></p>
       <p class='message1 container hide'>Player X first</p>
       <p class='message2 container'></p>
-
-
-
 
     </body>
 </html>

@@ -5,6 +5,7 @@ const signUpSuccess = function (data) {
   $('#sMessage').removeClass('failure')
   $('#sMessage').addClass('success')
   $('#sign-up').addClass('hide')
+  $('.dropdown-menu').removeClass('show')
   document.getElementById('sign-up').reset()
 }
 const signUpFailure = function () {
@@ -17,12 +18,12 @@ const signInSuccess = function (data) {
   $('#sMessage').text('Signed in Succesfully')
   $('#sMessage').removeClass('failure')
   $('#sMessage').addClass('success')
-
   $('#change-Pw').removeClass('hide')
   $('#new-Game').removeClass('hide')
   $('#stats').removeClass('hide')
-  $('#sign-in').addClass('hide')
-  $('#sign-up').addClass('hide')
+  $('#navbarDropdown1').addClass('hide')
+  $('.dropdown-menu').removeClass('show')
+  $('#navbarDropdown2').addClass('hide')
   $('#sign-out').removeClass('hide')
   document.getElementById('sign-in').reset()
   store.user = data.user
@@ -56,11 +57,11 @@ const signOutSuccess = function () {
   $('#change-Pw').addClass('hide')
   $('#new-Game').addClass('hide')
   $('#stats').addClass('hide')
-  $('#sign-in').removeClass('hide')
-  $('#sign-up').removeClass('hide')
   $('#message1').addClass('hide')
   $('#sign-out').addClass('hide')
   $('.message1').addClass('hide')
+  $('#navbarDropdown1').removeClass('hide')
+  $('#navbarDropdown2').removeClass('hide')
   for (let i = 0; i < 9; i++) {
     $('#' + i).html('')
     document.getElementById(i).disabled = false
