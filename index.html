@@ -12,12 +12,99 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <nav>
-      <h1>Tic-Tac-Toe</h1>
+
+       <nav class="navbar navbar-expand navbar-light bg-light">
+        <a class="navbar-brand" href="#">Tic-Tac-Toe</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+              <!-- Sign In -->
+            </li>
+            <li class="nav-item dropdown my-2 my-lg-0">
+              <a class="nav-link btn btn-outline-success my-2 my-sm-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sign in
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <form id="sign-in" class="border">
+                  <fieldset>
+                    <legend>Sign In</legend>
+                  <input type="email" name="credentials[email]" placeholder="user@email.com" >
+                  <input type="password" name="credentials[password]" placeholder="Password">
+                  <input type="submit" value="Sign In">
+                  </fieldset>
+                </form>
+              </div>
+            </li>
+            <!-- Sign up -->
+            <li class="nav-item dropdown my-2 my-lg-0">
+              <a class="nav-link btn btn-outline-success my-2 my-sm-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sign up
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <form id="sign-up" class="border">
+                <fieldset>
+                  <legend>Sign Up</legend>
+                <input type="email" name="credentials[email]" placeholder="user@email.com" >
+                <input type="password" name="credentials[password]" placeholder="Password">
+                <input type="password" name="credentials[password_confirmation]" placeholder="Password confirmation ">
+                <input type="submit" value="Sign Up">
+                </fieldset>
+              </form>
+              </div>
+            </li>
+            <!-- Change Password -->
+            <li class="nav-item dropdown my-2 my-lg-0 hide">
+              <a class="nav-link btn btn-outline-success my-2 my-sm-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Change Password
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <form id="change-Pw" class="border hide">
+                  <fieldset>
+                    <legend>Change Password</legend>
+                  <input type="password" name="passwords[old]" placeholder="Actual Password">
+                  <input type="password" name="passwords[new]" placeholder="New Password">
+                  <input type="submit" value="Change">
+                  </fieldset>
+                </form>
+              </div>
+            </li>
+            <li class="nav-item">
+            <!-- New game Button -->
+            <form id="new-Game" class="hide">
+            <fieldset>
+            <input type="submit" value="New Game" class="btn btn-outline-success my-2 my-sm-0">
+            </fieldset>
+            </form>
+            </li>
+            <li>
+              <form id="stats" class="hide">
+              <fieldset>
+              <input type="submit" value="Stats" class="btn btn-outline-success my-2 my-sm-0">
+              </fieldset>
+              </form>
+            </li>
+          </ul>
+
+          <!-- Log out -->
+          <form id="sign-out" class="border hide form-inline my-2 my-lg-0">
+              <fieldset>
+              <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Log Out">
+              </fieldset>
+          </form>
+
+        </div>
       </nav>
+
+
+
       <h2 id='sMessage' class='container'></h2>
-      <!-- Sign Up form -->
-      <form id="sign-up" class="border container">
+      <!-- Sign Up form
+      <form id="sign-up" class="border">
       <fieldset>
         <legend>Sign Up</legend>
       <input type="email" name="credentials[email]" placeholder="user@email.com" >
@@ -26,44 +113,44 @@
       <input type="submit" value="Sign Up">
       </fieldset>
     </form>
-    <!-- Sign In form -->
-    <form id="sign-in" class="border container">
+     Sign In form
+    <form id="sign-in" class="border">
       <fieldset>
         <legend>Sign In</legend>
       <input type="email" name="credentials[email]" placeholder="user@email.com" >
       <input type="password" name="credentials[password]" placeholder="Password">
       <input type="submit" value="Sign In">
       </fieldset>
-    </form>
-    <!-- Change Password -->
-    <form id="change-Pw" class="border container hide">
+    </form> -->
+    <!-- Change Password
+    <form id="change-Pw" class="border hide">
       <fieldset>
         <legend>Change Password</legend>
       <input type="password" name="passwords[old]" placeholder="Actual Password">
       <input type="password" name="passwords[new]" placeholder="New Password">
       <input type="submit" value="Change">
       </fieldset>
-    </form>
-    <!-- Sign Out button -->
-    <form id="sign-out" class="border container hide">
+    </form> -->
+    <!-- Sign Out button
+    <form id="sign-out" class="border hide">
       <fieldset>
-      <input type="submit" value="Sign Out">
+      <input type="submit" value="Log Out">
       </fieldset>
-    </form>
+    </form> -->
 
-      <!-- New game Button -->
-      <form id="new-Game" class="container hide">
+      <!-- New game Button
+      <form id="new-Game" class="hide">
       <fieldset>
       <input type="submit" value="New Game">
       </fieldset>
-      </form>
-      <!-- Stats Button -->
-      <form id="stats" class="container hide">
+      </form> -->
+      <!-- Stats Button
+      <form id="stats" class="hide">
       <fieldset>
       <input type="submit" value="Stats">
       </fieldset>
       </form>
-
+        -->
       <!-- Game Board-->
       <div class='container'>
           <div id="buttons" class="row hide">
@@ -83,9 +170,9 @@
       <p class='message container'></p>
       <p class='message1 container hide'>Player X first</p>
       <p class='message2 container'></p>
-      <footer>
 
 
-      </footer>
+
+
     </body>
 </html>

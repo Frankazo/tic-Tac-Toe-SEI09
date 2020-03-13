@@ -5,6 +5,7 @@ const signUpSuccess = function (data) {
   $('#sMessage').removeClass('failure')
   $('#sMessage').addClass('success')
   $('#sign-up').addClass('hide')
+  document.getElementById('sign-up').reset()
 }
 const signUpFailure = function () {
   $('#sMessage').text('Error Signing up')
@@ -23,6 +24,7 @@ const signInSuccess = function (data) {
   $('#sign-in').addClass('hide')
   $('#sign-up').addClass('hide')
   $('#sign-out').removeClass('hide')
+  document.getElementById('sign-in').reset()
   store.user = data.user
 }
 const signInFailure = function (data) {
@@ -36,6 +38,7 @@ const changePWSuccess = function (data) {
   $('#sMessage').text('Changed Password Succesfully')
   $('#sMessage').removeClass('failure')
   $('#sMessage').addClass('success')
+  document.getElementById('change-Pw').reset()
   // console.log(data)
 }
 const changePWFailure = function (data) {
