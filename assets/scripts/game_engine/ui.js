@@ -14,6 +14,7 @@ const newGamesuccesfull = function (data) {
     $('#' + i).html('')
     document.getElementById(i).disabled = false
   }
+  $('.buttons > button').html('')
   $('.message').text('')
   store.p = ['', '', '', '', '', '', '', '', '']
   store.count = 0

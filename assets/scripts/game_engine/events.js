@@ -6,11 +6,6 @@ const api = require('./api')
 
 // function tha compare values of the play vs the winning combination
 const checkWinner = function (id, letter) {
-  // update the API when a button is pressed
-  api.newMove(id, store.currentLetter, store.bool)
-    .then(ui.newMovesuccesfull)
-    .catch(ui.newMovefailure)
-
   // will return true or false if any of the combos meet the winnig criteria or it's a tie
   if (store.combinations.some(combo => combo.every(v => store.p[v] === 'X') || combo.every(v => store.p[v] === 'O'))) {
     ui.gameFinished(letter)
@@ -19,6 +14,10 @@ const checkWinner = function (id, letter) {
     ui.gameFinished('Nodoby')
     store.bool = true
   }
+  // update the API when a button is pressed
+  api.newMove(id, store.currentLetter, store.bool)
+    .then(ui.newMovesuccesfull)
+    .catch(ui.newMovefailure)
 }
 
 // function that changes the value of an specific spot in the board
