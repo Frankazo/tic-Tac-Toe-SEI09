@@ -1,65 +1,43 @@
 'use strict'
 const store = require('../store')
 const signUpSuccess = function (data) {
-  $('#sMessage').text('Signed up Succesfully, you have to Log in')
-  $('#sMessage').removeClass('failure')
-  $('#sMessage').addClass('success')
-  $('#sign-up').addClass('hide')
+  $('#sMessage').text('Signed up Succesfully, you have to Log in').removeClass('failure').addClass('success')
   $('.dropdown-menu').removeClass('show')
   document.getElementById('sign-up').reset()
 }
 const signUpFailure = function () {
-  $('#sMessage').text('Error Signing up')
-  $('#sMessage').removeClass('success')
-  $('#sMessage').addClass('failure')
+  $('#sMessage').text('Error Signing up').removeClass('success').addClass('failure')
+  document.getElementById('sign-up').reset()
 }
 
 const signInSuccess = function (data) {
-  $('#sMessage').text('Signed in Succesfully')
-  $('#sMessage').removeClass('failure')
-  $('#sMessage').addClass('success')
-  $('#new-Game').removeClass('hide')
-  $('#stats').removeClass('hide')
-  $('#navbarDropdown1').addClass('hide')
-  $('#navbarDropdown3').removeClass('hide')
+  $('#sMessage').text('Signed in Succesfully').removeClass('failure').addClass('success')
+  $('#new-Game, #stats, #navbarDropdown3, #sign-out').removeClass('hide')
+  $('#navbarDropdown1, #navbarDropdown2').addClass('hide')
   $('.dropdown-menu').removeClass('show')
-  $('#navbarDropdown2').addClass('hide')
-  $('#sign-out').removeClass('hide')
+
   document.getElementById('sign-in').reset()
   store.user = data.user
 }
 const signInFailure = function (data) {
-  $('#sMessage').text('Error Signing in')
-  $('#sMessage').removeClass('success')
-  $('#sMessage').addClass('failure')
+  $('#sMessage').text('Error Signing in').removeClass('success').addClass('failure')
+  document.getElementById('sign-in').reset()
 }
 
 const changePWSuccess = function (data) {
-  $('#sMessage').text('Changed Password Succesfully')
-  $('#sMessage').removeClass('failure')
-  $('#sMessage').addClass('success')
+  $('#sMessage').text('Changed Password Succesfully').removeClass('failure').addClass('success')
   document.getElementById('change-Pw').reset()
 }
 const changePWFailure = function (data) {
-  $('#sMessage').text('Error changing Password')
-  $('#sMessage').removeClass('success')
-  $('#sMessage').addClass('failure')
+  $('#sMessage').text('Error changing Password').removeClass('success').addClass('failure')
+  document.getElementById('change-Pw').reset()
 }
 
 const signOutSuccess = function () {
-  $('#sMessage').text('Signed out Succesfully')
-  $('#sMessage').removeClass('failure')
-  $('#sMessage').addClass('success')
-  $('#buttons').addClass('hide')
-  $('#sign').addClass('hide')
-  $('#new-Game').addClass('hide')
-  $('#stats').addClass('hide')
-  $('#message1').addClass('hide')
-  $('#sign-out').addClass('hide')
-  $('.message1').addClass('hide')
-  $('#navbarDropdown1').removeClass('hide')
-  $('#navbarDropdown2').removeClass('hide')
-  $('#navbarDropdown3').addClass('hide')
+  $('#sMessage').text('Signed out Succesfully').removeClass('failure').addClass('success')
+  $('#buttons, #sign, #new-Game, #stats, #sign-out, #navbarDropdown3, .message1').addClass('hide')
+  $('#navbarDropdown1, #navbarDropdown2').removeClass('hide')
+
   for (let i = 0; i < 9; i++) {
     $('#' + i).html('')
     document.getElementById(i).disabled = false
@@ -71,9 +49,7 @@ const signOutSuccess = function () {
   store.bool = false
 }
 const signOutFailure = function () {
-  $('#sMessage').text('Error Signing out')
-  $('#sMessage').removeClass('success')
-  $('#sMessage').addClass('failure')
+  $('#sMessage').text('Error Signing out').removeClass('success').addClass('failure')
 }
 
 module.exports = {
