@@ -32,7 +32,7 @@ const onPlay = function (event) {
       store.currentLetter = 'X'
       $('.message1').text('next move: Player O')
     }
-
+    $('#' + store.buttonId).html(store.currentLetter)
     store.p[store.buttonId] = store.currentLetter
 
     checkWinner()
@@ -62,8 +62,17 @@ const onStats = function (event) {
     .catch(ui.gameStatsfailure)
 }
 
+const onOldGame = function (event) {
+  event.preventDefault()
+  const gameid = event.target.id
+  api.showGame(gameid)
+    .then(ui.showGamesuccesfull)
+    .catch(ui.showGamefailure)
+}
+
 module.exports = {
   onPlay,
   onNewGame,
-  onStats
+  onStats,
+  onOldGame
 }

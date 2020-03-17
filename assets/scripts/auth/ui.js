@@ -35,9 +35,9 @@ const changePWFailure = function (data) {
 
 const signOutSuccess = function () {
   $('#sMessage').text('Signed out Succesfully').removeClass('failure').addClass('success')
-  $('#buttons, #sign, #new-Game, #stats, #sign-out, #navbarDropdown3, .message1').addClass('hide')
+  $('#game, #new-Game, #stats, #statistics, #sign-out, #navbarDropdown3').addClass('hide')
   $('#navbarDropdown1, #navbarDropdown2').removeClass('hide')
-
+  $('#games-display').html('')
   for (let i = 0; i < 9; i++) {
     $('#' + i).html('')
     document.getElementById(i).disabled = false

@@ -45,8 +45,20 @@ const gameStats = function () {
   })
 }
 
+// check games api call
+const showGame = function (id) {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createGame,
   newMove,
-  gameStats
+  gameStats,
+  showGame
 }

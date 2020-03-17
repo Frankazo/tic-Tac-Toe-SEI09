@@ -12,6 +12,7 @@ $(() => {
   $('#buttons').on('click', events.onPlay)
   $('#new-Game').on('submit', events.onNewGame)
   $('#stats').on('submit', events.onStats)
+  $('#games-display').on('click', 'button', events.onOldGame)
 
   // auth event handlers, for Sign Up, Sign In, Change Password and Sign Out
   $('#sign-up').on('submit', authEvents.onSignUp)
