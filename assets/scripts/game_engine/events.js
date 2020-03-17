@@ -33,8 +33,8 @@ const onPlay = function (event) {
       $('.message1').text('next move: Player O')
     }
 
-
     store.p[store.buttonId] = store.currentLetter
+
     checkWinner()
     // update the API when a button is pressed
     api.newMove()
