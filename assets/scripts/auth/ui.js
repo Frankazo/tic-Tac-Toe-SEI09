@@ -64,7 +64,6 @@ const signOutSuccess = function () {
     $('#' + i).html('')
     document.getElementById(i).disabled = false
   }
-  $('.message').text('')
   $('.message2').text('')
   store.p = ['', '', '', '', '', '', '', '', '']
   store.count = 0

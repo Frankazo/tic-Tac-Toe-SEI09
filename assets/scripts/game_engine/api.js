@@ -3,6 +3,7 @@
 const config = require('../config')
 const store = require('../store')
 
+// Create game Api call
 const createGame = function () {
   return $.ajax({
     url: config.apiUrl + '/games',
@@ -13,6 +14,7 @@ const createGame = function () {
   })
 }
 
+// update game api call
 const newMove = function () {
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game.id,
@@ -32,6 +34,7 @@ const newMove = function () {
   })
 }
 
+// check games api call
 const gameStats = function () {
   return $.ajax({
     url: config.apiUrl + '/games',

@@ -23,11 +23,8 @@ const onPlay = function (event) {
 
   // condition to check if and empty button has been press
   if ($('#' + store.buttonId).html() === '') {
-    // counter to keep track of plays
+    // counter to keep track of plays and select between X or O
     store.count += 1
-    // condition to check if we still have space in the board
-    // if we have space then check turn
-    // change between players
     if (store.count % 2 === 0) {
       store.currentLetter = 'O'
       $('.message1').text('next move: Player X')
@@ -35,12 +32,15 @@ const onPlay = function (event) {
       store.currentLetter = 'X'
       $('.message1').text('next move: Player O')
     }
+
+
     store.p[store.buttonId] = store.currentLetter
-    checkWinner(store.buttonId, store.currentLetter)
+    checkWinner()
     // update the API when a button is pressed
     api.newMove()
       .then(ui.newMovesuccesfull)
       .catch(ui.newMovefailure)
+    // check for a winner
   } else {
     $('.message2').text('invalid movement')
   }
