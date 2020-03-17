@@ -13,7 +13,7 @@ const createGame = function () {
   })
 }
 
-const newMove = function (id, letter, bool) {
+const newMove = function () {
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',
@@ -23,10 +23,10 @@ const newMove = function (id, letter, bool) {
     data: {
       'game': {
         'cell': {
-          'index': id,
-          'value': letter
+          'index': store.buttonId,
+          'value': store.currentLetter
         },
-        'over': bool
+        'over': store.bool
       }
     }
   })

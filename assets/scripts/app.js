@@ -8,11 +8,12 @@ const events = require('./game_engine/events')
 const authEvents = require('./auth/events')
 
 $(() => {
-  // click event that will change the empty space to an X or O
+  // game event handlers, for a play, NewGame and Stats
   $('#buttons').on('click', events.onPlay)
   $('#new-Game').on('submit', events.onNewGame)
   $('#stats').on('submit', events.onStats)
 
+  // auth event handlers, for Sign Up, Sign In, Change Password and Sign Out
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-Pw').on('submit', authEvents.onChangePW)

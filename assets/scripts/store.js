@@ -2,14 +2,15 @@
 
 const user = {
 }
+let buttonId
 // game is over
-let bool = false
+let bool
 // Current play
-let currentLetter = ''
+let currentLetter
 // player counter
-let count = 0
+let count
 // board representation
-let p = ['', '', '', '', '', '', '', '', '']
+let p
 // wining combinations
 const combinations = [
   [0, 1, 2],
