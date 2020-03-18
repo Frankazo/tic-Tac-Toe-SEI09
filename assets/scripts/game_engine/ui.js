@@ -89,7 +89,7 @@ const gameStatsfailure = function (data) {
 const showGamesuccesfull = function (data) {
   $('#sMessage').text('Game retrieve').removeClass('failure').addClass('success')
   $('.message2').text('')
-  $('.message1').text('Player X first').removeClass('hide')
+  $('.message1').removeClass('hide')
   $('#game').removeClass('hide')
   $('#statistics').addClass('hide')
 
@@ -97,7 +97,15 @@ const showGamesuccesfull = function (data) {
   store.count = store.p.filter(x => x !== '').length
   store.game = data.game
   store.bool = data.game.over
-
+  if (store.bool) {
+    $('.message1').text('Game Over')
+  } else {
+    if (store.count % 2 === 0) {
+      $('.message1').text('next move: Player X')
+    } else {
+      $('.message1').text('next move: Player O')
+    }
+  }
   for (let i = 0; i < 9; i++) {
     $('#' + i).html(store.p[i])
     document.getElementById(i).disabled = store.bool
