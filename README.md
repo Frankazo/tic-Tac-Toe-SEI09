@@ -5,7 +5,7 @@ CONTENTS OF THIS FILE
  * Wireframes
  * User Stories
  * Planning and Development
- * Unsolve Problems
+ * Future features
  * Technologies
  * Creator
 
@@ -58,7 +58,7 @@ CONTENTS OF THIS FILE
   - Create and Arrays with the 8 possible wining combinations
   - After each play check Board representation vs wining combinations for 'X' or 'O'
           (store.combinations.some(combo => combo.every(v => store.board[v] === 'X') || combo.every(v => store.board[v] === 'O')))
-    - If this is false in the last play then is a Draw
+  - If this is false in the last play then is a Draw
 
   ### Game UI
 
@@ -84,13 +84,16 @@ CONTENTS OF THIS FILE
   - Update Game, play the game
   - Get Games
 
-  UNSOLVE PROBLEMS
-  ----------------
+  FUTURE FEATURES
+  ---------------
+  - AI Bot: User can play against a computer AI.
+  - Responsive Design: Functionality on mobile experience.
+  - Multiplayer: Different logged in users can compete from different devices.
 
   TECHNOLOGIES
   ------------
     - html
-    - SCSS
+    - Scss
     - javascript
     - bootstrap
 
