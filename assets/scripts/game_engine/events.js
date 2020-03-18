@@ -62,6 +62,7 @@ const onStats = function (event) {
     .catch(ui.gameStatsfailure)
 }
 
+// retrieve an old Game
 const onOldGame = function (event) {
   event.preventDefault()
   const gameid = event.target.id
